@@ -1,7 +1,7 @@
 # Option-ID Based Elimination For Multiple Choice Questions
 
 ## Introduction 
-This is an official repository of our paper [Option-ID Based Elimination For Multiple Choice Questions](https://arxiv.org/abs/2501.15175). 
+This is an official repository of our paper *Option-ID Based Elimination For Multiple Choice Questions*. 
 
 ## 1. Dependencies
 Use the following command to setup a conda environment and download required pacakages.
