@@ -23,3 +23,19 @@ bash run script/mask.sh
 bash run script/EE_new.sh
 bash run script/few_shot.sh
 ```
+
+## 3. Citations
+
+If you find this repository helpful, please cite our paper.
+
+```
+@article{zhu2025optionidbasedeliminationmultiple,
+      title={Option-ID Based Elimination For Multiple Choice Questions}, 
+      author={Zhenhao Zhu and Bulou Liu and Qingyao Ai and Yiqun Liu},
+      year={2025},
+      eprint={2501.15175},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2501.15175}, 
+}
+```
