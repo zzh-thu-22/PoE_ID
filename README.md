@@ -3,9 +3,11 @@
 ## Introduction 
 This is an official repository of our paper *Option-ID Based Elimination For Multiple Choice Questions*. 
 
-<figure>
-  <img src="imgs/PoE_ID.png" alt="PoE_ID Overview" width="600"/>
-</figure>
+<center>
+  <figure>
+    <img src="imgs/PoE_ID.png" alt="PoE_ID Overview" width="600"/>
+  </figure>
+</center>
 
 ## 1. Dependencies
 Use the following command to setup a conda environment and download required pacakages.
