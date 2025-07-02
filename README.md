@@ -17,11 +17,11 @@ pip install -r requirements.txt
 
 ## 2. Run
 ```
-bash run script/option_id.sh
-bash run script/option_score.sh
-bash run script/mask.sh
-bash run script/EE_new.sh
-bash run script/few_shot.sh
+bash script/option_id.sh
+bash script/option_score.sh
+bash script/mask.sh
+bash script/EE_new.sh
+bash script/few_shot.sh
 ```
 
 ## 3. Citations

@@ -99,7 +99,7 @@ if __name__ == "__main__":
     model_name = model_path.split('/')[-1]
 
     for d in dataset:
-        path = f'/dataset/pride/{d}_prior.json'
+        path = f'dataset/pride/{d}_prior.json'
         data = read_json_objects(path)
 
         length = len(data[0]['choices'])
@@ -125,7 +125,7 @@ if __name__ == "__main__":
         all_prior = all_prior / len(data)
 
 
-        path = f'/dataset/test/{d}.json'   
+        path = f'dataset/test/{d}.json'   
         data = read_json_objects(path)
         
         for i in range(0, len(data)):
@@ -158,7 +158,7 @@ if __name__ == "__main__":
                 index = remain_index[np.argmax(new_prob)]
                 answer = option_id[index]
 
-            path = args.output_path + f'/{d}/{model_name}/log.txt'
+            path = os.path.join(args.output_path, d, model_name, 'log.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
@@ -186,7 +186,7 @@ if __name__ == "__main__":
 
             answer = option_id[answer_index]
 
-            path = args.output_path + f'/{d}/{model_name}/seq.txt'
+            path = os.path.join(args.output_path, d, model_name, 'seq.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)

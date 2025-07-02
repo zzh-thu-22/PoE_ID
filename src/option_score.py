@@ -71,7 +71,7 @@ def cal_score(question, option):
 if __name__ == "__main__":
     model_name = model_path.split('/')[-1]
     for d in dataset:
-        path = f'/dataset/test/{d}.json'
+        path = f'dataset/test/{d}.json'
         data = read_json_objects(path)
         length = len(data[0]['choices'])
         for i in range(0, len(data)):
@@ -114,35 +114,35 @@ if __name__ == "__main__":
             AOLP_answer = option_id[AOLP_index]
             PMI_answer = option_id[PMI_index]
 
-            path = args.output_path + f'/{d}/{model_name}/LM.txt'
+            path = os.path.join(args.output_path, d, model_name, 'LM.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
             with open (path, 'a') as f:
                 f.write(f'{LM_answer}\n')
 
-            path = args.output_path + f'/{d}/{model_name}/AVG.txt'
+            path = os.path.join(args.output_path, d, model_name, 'AVG.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
             with open (path, 'a') as f:
                 f.write(f'{AVG_answer}\n')
 
-            path = args.output_path + f'/{d}/{model_name}/channel.txt'
+            path = os.path.join(args.output_path, d, model_name, 'channel.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
             with open (path, 'a') as f:
                 f.write(f'{channel_answer}\n')
 
-            path = args.output_path + f'/{d}/{model_name}/AOLP.txt'
+            path = os.path.join(args.output_path, d, model_name, 'AOLP.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
             with open (path, 'a') as f:
                 f.write(f'{AOLP_answer}\n')
 
-            path = args.output_path + f'/{d}/{model_name}/PMI.txt'
+            path = os.path.join(args.output_path, d, model_name, 'PMI.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
@@ -168,7 +168,7 @@ if __name__ == "__main__":
                 IE_scores[mask_index] = -np.inf
                 IE_answer = option_id[np.argmax(IE_scores)]
            
-            path = args.output_path + f'/{d}/{model_name}/IE.txt'
+            path = os.path.join(args.output_path, d, model_name, 'IE.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)

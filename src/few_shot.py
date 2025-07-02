@@ -151,7 +151,7 @@ if __name__ == "__main__":
     model_name = model_path.split('/')[-1]
 
     for d in dataset:
-        path = f'/dataset/pride/{d}_prior.json'
+        path = f'dataset/pride/{d}_prior.json'
         data = read_json_objects(path)
 
         length = len(data[0]['choices'])
@@ -178,8 +178,8 @@ if __name__ == "__main__":
 
 
 
-        path = f'/dataset/test/{d}.json'
-        shot_path = f'/dataset/pride/{d}_prior.json'
+        path = f'dataset/test/{d}.json'
+        shot_path = f'dataset/pride/{d}_prior.json'
 
         data = read_json_objects(path)
         shots = make_shots(args.shots_number, shot_path)
@@ -213,7 +213,7 @@ if __name__ == "__main__":
                 index = remain_index[np.argmax(new_prob)]
                 answer = option_id[index]
 
-            path = args.output_path + f'/{args.shots_number}/{d}/{model_name}/log.txt'
+            path = os.path.join(args.output_path, args.shots_number, d, model_name, 'log.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
@@ -226,7 +226,7 @@ if __name__ == "__main__":
             index = np.argmax(prob)
             answer = option_id[index]
 
-            path = args.output_path + f'/{args.shots_number}/{d}/{model_name}/D-MCP.txt'
+            path = os.path.join(args.output_path, args.shots_number, d, model_name, 'D-MCP.txt')
             os.makedirs(os.path.dirname(path), exist_ok=True)
             if os.path.exists(path) and i == 0:
                 os.remove(path)
