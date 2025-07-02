@@ -23,7 +23,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_path, device_map='auto', torch_dtype=torch.bfloat16, trust_remote_code=True)
 model = model.eval()
 
-dataset = ['arithmetic_A', 'arithmetic']
+dataset = ['arithmetic', 'MMLU-Pro']
 
 def read_json_objects(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
