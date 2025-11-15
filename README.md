@@ -1,7 +1,6 @@
 # Option-ID Based Elimination For Multiple Choice Questions
 
 ## Introduction 
-This is an official repository of our paper *Option-ID Based Elimination For Multiple Choice Questions*. 
 
 <p align="center">
   <img src="imgs/PoE_ID.png" alt="PoE_ID Overview" width="600"/>
